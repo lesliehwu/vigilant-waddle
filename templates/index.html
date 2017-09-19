@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Full Friends</title>
+		<style>
+			table, th, td{
+				border:1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Friend Since</th>
+			</tr>
+			{% for row in full_friends %}
+			<tr>
+				<td> {{ row['name'] }} </td>
+				<td> {{ row['age'] }} </td>
+				<td> {{ row['friends_since'] }} </td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<form action='/add' method='post'>
+			Name:<input type='text' name='name'>
+			Age:<input type='age' name='age'>
+			<input type='submit' value='Submit Bitch'>
+		</form>
+	</body>
+</html>
